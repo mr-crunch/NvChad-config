@@ -13,6 +13,9 @@ local options = {
 		"vim",
 		"vimdoc",
 		"yaml",
+		"css",
+		"html",
+		"javascript",
 	},
 
 	highlight = {
