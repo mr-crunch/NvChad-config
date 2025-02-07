@@ -16,6 +16,7 @@ local options = {
 		"css",
 		"html",
 		"javascript",
+		"rust",
 	},
 
 	highlight = {
