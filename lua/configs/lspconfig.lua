@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
-
+local util = require("lspconfig/util")
 local lspconfig = require("lspconfig")
 
 lspconfig.servers = {
@@ -27,20 +27,6 @@ for _, lsp in ipairs(default_servers) do
 		capabilities = nvlsp.capabilities,
 	})
 end
-
-require("lspconfig").rust_analyzer.setup({
-	on_attach = on_attach,
-	on_init = on_init,
-	capabilities = capabilities,
-	filetype = { "rs" },
-	settings = {
-		["rust-analyzer"] = {
-			diagnostics = {
-				enable = false,
-			},
-		},
-	},
-})
 
 require("lspconfig").clangd.setup({
 	on_attach = function(client, bufnr)
