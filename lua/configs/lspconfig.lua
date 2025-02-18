@@ -3,7 +3,6 @@ require("nvchad.configs.lspconfig").defaults()
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
-local util = require("lspconfig/util")
 local lspconfig = require("lspconfig")
 
 lspconfig.servers = {
